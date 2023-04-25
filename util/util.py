@@ -27,7 +27,7 @@ def fuse_images(rec_J, refine_J):
     score_recniqe = niqe(rec_J)
     score_refineniqe = niqe(refine_J)
 
-    fuseWeightniqe = 1 - score_recniqe / (score_recniqe + score_refineniqe)
+    fuseWeightniqe = score_recniqe / (score_recniqe + score_refineniqe)
     fuseWeightpiqe = 1 - score_recpiqe / (score_recpiqe + score_refinepiqe)
     fuseWeight = (fuseWeightpiqe+fuseWeightniqe)/2
 
