@@ -36,11 +36,7 @@ class DedustModel(BaseModel):
         return parser
 
     def __init__(self, opt):
-        """Initialize the RefineDNet class.
-
-        Parameters:
-            opt (Option class)-- stores all the experiment flags; needs to be a subclass of BaseOptions
-        """
+        
         BaseModel.__init__(self, opt)
 
         # specify the training losses you want to print out. The training/test scripts will call <BaseModel.get_current_losses>
